@@ -5,19 +5,28 @@ import { useState } from 'react'
 function TodoList() {
     let  [Todos , setTodos ] = useState(["sample task"]);
     let [newTodo , setnewTodo] = useState("");
+
+
     let addNewTask = () =>{
-      console.log("we have to add new task in todo");
+      setTodos([...Todos, newTodo]);
+      setnewTodo ("");
+
+
+
+      
     };
      
     let updateTodoValu = (Event) => {
-      console.log(Event.target);
+      setnewTodo(Event.target.value);
 
     }
   return (
     <div>
-        <input placeholder='Add a task' type='text' value={newTodo}></input>
+        <input placeholder='Add a task'  value={newTodo} 
+        onChange={updateTodoValu}
+        ></input>
         <br />
-        <button>Add Task</button>
+        <button onClick={addNewTask}>Add Task</button>
         <br />
         <br />
         <br />

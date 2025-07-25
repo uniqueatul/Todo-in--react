@@ -24,7 +24,9 @@ function TodoList() {
     <div>
         <input placeholder='Add a task'  value={newTodo} 
         onChange={updateTodoValu}
-        ></input>
+        ></input> 
+        <br />
+        <br />
         <br />
         <button onClick={addNewTask}>Add Task</button>
         <br />

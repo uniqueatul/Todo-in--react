@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-    {/* <TodoList/> */}
-    <Lottery/>
+    <TodoList/>
+    {/* <Lottery/> */}
 
     </>
   )

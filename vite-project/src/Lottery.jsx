@@ -1,20 +1,24 @@
 
 import React from 'react'
 import { useState } from 'react'
-import { generateRandomNumber } from './helpher';
-
+import { generateRandomNumber, sum } from './helpher';
 
 
 
 
 function Lottery() {
-    let [Ticket , setTicket] = useState(generateRandomNumber(3));
-    let isWinning = sum(Ticket) === 15;
+    let [Ticket, setTicket] = useState([generateRandomNumber(3)]);
+    // let isWinning = sum(Ticket) === 15;
+    let win = sum(Ticket) ===15;
+   
+let Handler = () =>{
+    setTicket = ([generateRandomNumber(3)]);
+        
+    
+    
+};
 
-    let buyTicket = () =>{
-        setTicket(generateRandomNumber(3));
-    };
-
+    
 
   return (
     <div>
@@ -25,10 +29,10 @@ function Lottery() {
             <span>{Ticket[2]}</span>
         </div>
         <br />
-        
+
         <div>
-            <button onClick={buyTicket}> Buy new Ticket </button>
-            <h3>{isWinning && "congratulation" } </h3>
+            <button onClick={Handler}> Buy new Ticket </button>
+            <h3> congras, you won</h3>
         </div>
 
 
